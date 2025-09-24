@@ -1,0 +1,38 @@
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+input[type='number'] {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+.password-box input {
+  width: 100%;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background: #0b3d2e;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
