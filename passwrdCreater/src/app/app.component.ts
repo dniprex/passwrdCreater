@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { faKey, faCopy, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,9 +13,12 @@ export class AppComponent {
   faKey = faKey;
   faCopy = faCopy;
   faRefresh = faSyncAlt;
-  
+
+  readonly MAX_LENGTH = 60;
+
   generatePassword() {
-    const length = this.passwordLength || 12;
+    const length = Math.min(this.passwordLength || 12, this.MAX_LENGTH);
+
     const charset =
       'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
     let password = '';
